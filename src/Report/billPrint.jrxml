@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="500" pageHeight="842" columnWidth="460" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="747aea71-dc9a-4a88-bc0f-14ba6327e199">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString>
+		<![CDATA[SELECT
+    bill_content.*,bill_table.*
+FROM
+     bill_content,bill_table]]>
+	</queryString>
+	<field name="id" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="bill_id" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="prod_id" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="prod_name" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="quantity" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="prod_price" class="java.lang.Double">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="type" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="dateCreated" class="java.sql.Date">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="table_no" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="totalPrice" class="java.lang.Double">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="43" splitType="Stretch">
+			<staticText>
+				<reportElement x="115" y="3" width="256" height="20" uuid="4244c130-bc16-46bf-8581-7d34724b4502"/>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[JR. RESTAURANT ORDERING SYSTEM]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="140" y="23" width="205" height="20" uuid="6dc8b35b-1078-4542-ab93-2f0036b3adf1"/>
+				<textElement textAlignment="Center">
+					<font size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[6324 Poblacion, Trinidad, Bohol]]></text>
+			</staticText>
+		</band>
+	</title>
+	<columnHeader>
+		<band height="71" splitType="Stretch">
+			<staticText>
+				<reportElement x="4" y="28" width="48" height="17" uuid="f1a025c1-7bc6-4b99-b1bb-0e424d6ec2b2"/>
+				<textElement textAlignment="Left" verticalAlignment="Top">
+					<font size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Bill No. :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="179" y="28" width="41" height="17" uuid="38f3b729-dbf5-4805-9928-c52663be1723"/>
+				<textElement verticalAlignment="Top"/>
+				<text><![CDATA[@Table]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="140" y="8" width="205" height="20" uuid="65bd50ce-5c7b-4138-8fb9-6c99adf58f1f"/>
+				<textElement textAlignment="Center">
+					<font size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[*** Serves As An Official Receipt ***]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="345" y="54" width="57" height="15" uuid="535f743b-8924-41c8-8773-f9e073f88a90"/>
+				<textElement textAlignment="Left">
+					<font size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Price]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="4" y="54" width="36" height="15" uuid="1bd84857-686c-4507-af47-b5181bf42a56"/>
+				<textElement textAlignment="Left">
+					<font size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Qty.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="140" y="56" width="57" height="15" uuid="c8f5944a-38ce-400d-9249-0eb1912560e4"/>
+				<textElement textAlignment="Left">
+					<font size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Product]]></text>
+			</staticText>
+			<line>
+				<reportElement x="4" y="70" width="456" height="1" uuid="0035aeb9-ad6a-4230-9b98-7e5a0cb8006e"/>
+			</line>
+			<textField>
+				<reportElement x="52" y="23" width="100" height="23" uuid="ce01738c-e459-4c1f-8e27-68a4f288161f"/>
+				<textElement verticalAlignment="Middle">
+					<font size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{bill_id}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="220" y="24" width="16" height="22" uuid="52fb4969-c0af-4264-945d-c5c273e28d13"/>
+				<textElement verticalAlignment="Middle">
+					<font size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{table_no}]]></textFieldExpression>
+			</textField>
+			<textField pattern="MMMMM dd, yyyy">
+				<reportElement x="345" y="24" width="115" height="24" uuid="43bc387c-64e4-4257-b1dd-ae008b32d5a2"/>
+				<textFieldExpression><![CDATA[$F{dateCreated}]]></textFieldExpression>
+			</textField>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="21" splitType="Stretch">
+			<textField>
+				<reportElement x="4" y="0" width="48" height="17" uuid="f98390e0-6bda-45de-8a18-b3fefc00523a"/>
+				<textFieldExpression><![CDATA[$F{quantity}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="140" y="0" width="187" height="17" uuid="67202dbd-1ba6-40e2-9f4f-c59b4907bd95"/>
+				<textFieldExpression><![CDATA[$F{prod_name}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="345" y="0" width="115" height="17" uuid="e23ce234-398a-4df3-b1b7-5f3d3c4b8a0a"/>
+				<textFieldExpression><![CDATA[$F{prod_price}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<summary>
+		<band height="86" splitType="Stretch">
+			<line>
+				<reportElement x="4" y="2" width="456" height="1" uuid="a63056ce-75ca-45f3-b77d-bd3c4a948246"/>
+			</line>
+			<staticText>
+				<reportElement x="179" y="3" width="136" height="16" uuid="27b7ccd9-a669-441a-a756-01ef58753f03"/>
+				<textElement>
+					<font size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[TOTAL AMOUNT DUE :]]></text>
+			</staticText>
+			<line>
+				<reportElement x="4" y="20" width="456" height="1" uuid="1e2a2c36-d766-4de2-90f0-dca15e644166"/>
+			</line>
+			<textField>
+				<reportElement x="345" y="3" width="115" height="17" uuid="5d77ffc5-f1d5-4a30-94a5-a7ff414f42f8"/>
+				<textElement>
+					<font size="11" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{totalPrice}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="140" y="40" width="205" height="20" uuid="c2edfba5-04af-4974-88bc-eb759b9b56dd"/>
+				<textElement textAlignment="Center">
+					<font size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[JR.E System Inc. 2020-2021]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="140" y="26" width="205" height="20" uuid="2a6c4f47-dc61-45b5-8c13-0a6086ebd799"/>
+				<textElement textAlignment="Center">
+					<font size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[*** Thank You! 'Till Next Time ***]]></text>
+			</staticText>
+		</band>
+	</summary>
+</jasperReport>

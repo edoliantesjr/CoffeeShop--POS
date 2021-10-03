@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="11eec303-ae45-414a-a271-a5088e65ae00">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT
+     *
+FROM
+     `product` product]]>
+	</queryString>
+	<field name="id" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="baseid" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="prod_id" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="prod_name" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="prod_price" class="java.lang.Double">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="type" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="44" splitType="Stretch">
+			<staticText>
+				<reportElement x="150" y="4" width="256" height="20" uuid="8a3e9dbf-2fa8-40ef-b82e-0206a890dbfc"/>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[JR. COFFEE SHOP BILLING SYSTEM]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="175" y="24" width="205" height="20" uuid="f362aca4-aefc-4fc6-baff-c511325f1bda"/>
+				<textElement textAlignment="Center">
+					<font size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[6324 Poblacion, Trinidad, Bohol]]></text>
+			</staticText>
+		</band>
+	</title>
+	<columnHeader>
+		<band height="50" splitType="Stretch">
+			<staticText>
+				<reportElement x="36" y="1" width="44" height="20" uuid="53143120-6933-4e62-a0bc-3229fabe8d3f"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[LIST OF ]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="84" y="1" width="101" height="20" uuid="4b59d7b0-016a-470c-81cb-6c0486783d56"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="11" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{type}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="36" y="28" width="77" height="20" uuid="de3e0ae3-0035-4eb6-9985-1b4041f15dc1"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[PRODUCT ID ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="185" y="28" width="114" height="20" uuid="60e6dd96-ebed-4b33-9fee-0d211f471ea1"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[PRODUCT NAME]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="411" y="28" width="117" height="20" uuid="56537e91-bd3e-4a44-8333-aa247323a4ca"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[PRICE]]></text>
+			</staticText>
+			<line>
+				<reportElement x="36" y="27" width="492" height="1" uuid="ad2b6316-67b5-4c91-a2a5-e6423c41c6c5"/>
+			</line>
+			<line>
+				<reportElement x="36" y="48" width="492" height="1" uuid="0aa9637d-5f7b-40d2-a524-8dd72971f800"/>
+			</line>
+			<line>
+				<reportElement x="179" y="27" width="1" height="20" uuid="4cda5e11-78ed-4781-bbb0-654e1d5aa4be"/>
+			</line>
+			<line>
+				<reportElement x="407" y="29" width="1" height="20" uuid="433425ab-a582-4aff-9263-8ec63133db56"/>
+			</line>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="21" splitType="Stretch">
+			<textField>
+				<reportElement x="36" y="1" width="143" height="20" uuid="6211ffbc-ec5a-4d76-8f8a-a3dfe5dfa3ff"/>
+				<textFieldExpression><![CDATA[$F{prod_id}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="185" y="1" width="221" height="20" uuid="a245a0d8-6528-4fab-95ac-fda346c47e3d"/>
+				<textFieldExpression><![CDATA[$F{prod_name}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="411" y="0" width="117" height="20" uuid="d92d6a95-2f65-484e-94d0-63aa10ad9ef0"/>
+				<textFieldExpression><![CDATA[$F{prod_price}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<summary>
+		<band height="66" splitType="Stretch">
+			<line>
+				<reportElement x="36" y="2" width="492" height="1" uuid="c43915ff-e41b-43ff-97ea-bef3a7be0f2b"/>
+			</line>
+			<staticText>
+				<reportElement x="175" y="42" width="205" height="20" uuid="db69eda6-a4d6-47ce-a6e7-c0aabdac8584"/>
+				<textElement textAlignment="Center">
+					<font size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[JR.E System Inc. 2020-2021]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="334" y="10" width="73" height="20" uuid="2bc21cc7-c086-4527-919c-f895a905b985"/>
+				<textElement textAlignment="Center">
+					<font size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Print Date :]]></text>
+			</staticText>
+			<textField pattern="MM/dd/yyyy hh:mm a">
+				<reportElement x="411" y="10" width="100" height="20" uuid="b2c5c3a7-8ac5-4fcc-88d2-c1421ce8402e"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</summary>
+</jasperReport>
